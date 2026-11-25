@@ -1,0 +1,18 @@
+.dashboard-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #d9f0e8;
+    color: #103533;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.dashboard-button:hover {
+    background-color: #bce5d7;
+}
+
+.dashboard-button:focus-visible {
+    outline: 2px solid #79cdb4;
+    outline-offset: 4px;
+}

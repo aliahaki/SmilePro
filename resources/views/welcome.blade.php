@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     @fonts
@@ -2168,7 +2168,7 @@
     class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
     <header class="w-full lg:max-w-4xl max-w-[335px] mb-6">
         <nav class="flex justify-end">
-            <a href="{{ route('dashboard') }}" class="inline-block rounded-sm border px-5 py-1.5 dark:text-white">
+            <a href="{{ route('dashboard') }}" class="dashboard-button">
                 Dashboard
             </a>
         </nav>
