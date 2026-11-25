@@ -39,11 +39,11 @@ a:focus-visible {
 
 .brand {
     display: inline-block;
-    margin: 0 0 2rem .75rem;
+    margin: 0 0 2rem 0.75rem;
     color: var(--ink);
     font-size: 1.75rem;
     font-weight: 750;
-    letter-spacing: -.06em;
+    letter-spacing: -0.06em;
     text-decoration: none;
 }
 
@@ -53,12 +53,12 @@ a:focus-visible {
 
 .sidebar-nav {
     display: grid;
-    gap: .35rem;
+    gap: 0.35rem;
 }
 
 .sidebar-nav a {
-    padding: .7rem .85rem;
-    border-radius: .65rem;
+    padding: 0.7rem 0.85rem;
+    border-radius: 0.65rem;
     color: var(--muted);
     font-weight: 600;
     text-decoration: none;
@@ -89,11 +89,11 @@ a:focus-visible {
     margin: 0;
     font-size: clamp(2rem, 4vw, 3rem);
     line-height: 1.15;
-    letter-spacing: -.04em;
+    letter-spacing: -0.04em;
 }
 
 .dashboard-header p {
-    margin: .5rem 0 0;
+    margin: 0.5rem 0 0;
     color: var(--muted);
 }
 
@@ -125,17 +125,17 @@ a:focus-visible {
 }
 
 .dashboard-card p {
-    margin: .5rem 0 1.5rem;
+    margin: 0.5rem 0 1.5rem;
     color: var(--muted);
 }
 
 .card-link {
     display: inline-flex;
-    gap: .65rem;
+    gap: 0.65rem;
     align-items: center;
     margin-top: auto;
-    padding: .65rem .85rem;
-    border-radius: .55rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.55rem;
     background: var(--mint);
     color: var(--accent);
     font-weight: 650;
@@ -164,7 +164,7 @@ a:focus-visible {
     }
 
     .brand {
-        margin: 0 0 .75rem;
+        margin: 0 0 0.75rem;
     }
 
     .sidebar-nav {
@@ -173,6 +173,76 @@ a:focus-visible {
     }
 
     .sidebar-nav a {
-        font-size: .9rem;
+        font-size: 0.9rem;
     }
+}
+
+.patienten-tabel {
+    overflow-x: auto;
+    border: 1px solid #dce7e4;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.patienten-tabel table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.patienten-tabel th,
+.patienten-tabel td {
+    padding: 14px 18px;
+}
+
+.patienten-tabel th {
+    background: #d9f0e8;
+    color: #103533;
+}
+
+.patienten-tabel td {
+    border-top: 1px solid #dce7e4;
+}
+
+.patienten-tabel p {
+    margin: 0;
+    padding: 18px;
+    color: #4d6663;
+}
+
+.patienten-dialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    box-sizing: border-box;
+    width: min(24rem, calc(100% - 2rem));
+    padding: 1.5rem;
+    border: 1px solid #b8dbd0;
+    border-radius: 12px;
+    background: #fff;
+    color: #103533;
+    box-shadow: 0 12px 36px rgb(16 53 51 / 20%);
+}
+
+.patienten-dialog::backdrop {
+    background: rgb(16 53 51 / 45%);
+}
+
+.patienten-dialog h2 {
+    margin: 0 0 0.5rem;
+}
+
+.patienten-dialog button {
+    padding: 0.6rem 1rem;
+    border: 0;
+    border-radius: 6px;
+    background: #086256;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.patienten-dialog button:focus-visible {
+    outline: 2px solid #086256;
+    outline-offset: 3px;
 }
