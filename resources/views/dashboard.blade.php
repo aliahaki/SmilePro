@@ -18,6 +18,7 @@
                 <a href="{{ url('/agenda') }}">Agenda</a>
                 <a href="{{ url('/patienten') }}">Patiënten</a>
                 <a href="{{ url('/behandelingen') }}">Behandelingen</a>
+                <a href="{{ url('/Medewerker') }}">Medewerker</a>
             </nav>
         </aside>
 
