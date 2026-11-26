@@ -64,10 +64,10 @@
         </div>
     @endif
 
-    @if ($afspraken->isEmpty())
-        <dialog id="agenda-melding" class="patienten-dialog" aria-labelledby="agenda-melding-titel">
-            <h2 id="agenda-melding-titel">Agenda overzicht</h2>
-            <p>Er zijn geen afspraken ingepland voor deze datum.</p>
+    @if ($patienten->isEmpty())
+        <dialog id="patienten-melding" class="patienten-dialog" aria-labelledby="melding-titel">
+            <h2 id="melding-titel">Patiënten overzicht</h2>
+            <p>Er zijn geen patiënten gevonden.</p>
 
             <form method="dialog">
                 <button type="submit" autofocus>Sluiten</button>
@@ -75,16 +75,16 @@
         </dialog>
 
         <script>
-            const agendaMelding = document.getElementById('agenda-melding');
+            const melding = document.getElementById('patienten-melding');
 
-            agendaMelding.showModal();
+            melding.showModal();
 
             setTimeout(() => {
-                if (agendaMelding.open) {
-                    agendaMelding.close();
+                if (melding.open) {
+                    melding.close();
                 }
             }, 3000);
-        </script>
+        </script>   
     @endif
 </body>
 

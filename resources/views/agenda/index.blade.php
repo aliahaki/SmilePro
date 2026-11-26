@@ -17,7 +17,7 @@
 
             <nav class="sidebar-nav" aria-label="Hoofdnavigatie">
                 <a href="{{ route('dashboard') }}">Dashboard</a>
-                <a href="{{ url('/agenda') }}" aria-current="page">Agenda</a>
+                <a href="{{ route('agenda.index') }}" aria-current="page">Agenda</a>
                 <a href="{{ route('patienten.index') }}">Patiënten</a>
                 <a href="{{ url('/behandelingen') }}">Behandelingen</a>
             </nav>
