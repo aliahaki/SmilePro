@@ -2,18 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\DB;
+use App\Providers\Patienten\Index;
+use Illuminate\View\View;
 
 class PatientController extends Controller
 {
-    public function index()
+    public function index(Index $index): View
     {
-        $patienten = DB::table('Patient')
-            ->select('Voornaam', 'Achternaam', 'Geboortedatum')
-            ->orderBy('Achternaam')
-            ->orderBy('Voornaam')
-            ->get();
-
-        return view('patienten.index', compact('patienten'));
+        return $index->index();
     }
 }

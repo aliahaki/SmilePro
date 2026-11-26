@@ -246,3 +246,134 @@ a:focus-visible {
     outline: 2px solid #086256;
     outline-offset: 3px;
 }
+
+.agenda-paneel {
+    overflow: hidden;
+    border: 1px solid #dce7e4;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.agenda-werkbalk,
+.agenda-weekknoppen,
+.agenda-datumformulier {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+}
+
+.agenda-werkbalk {
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.agenda-weekknoppen a,
+.agenda-datumformulier input,
+.agenda-datumformulier button {
+    padding: .5rem .75rem;
+    border: 1px solid #dce7e4;
+    border-radius: 8px;
+    background: #fff;
+    color: #103533;
+    font: inherit;
+    text-decoration: none;
+}
+
+.agenda-datumformulier button {
+    border-color: #086256;
+    background: #086256;
+    color: #fff;
+    cursor: pointer;
+}
+
+.agenda-week {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: .25rem;
+    padding: .75rem;
+    border-top: 1px solid #dce7e4;
+}
+
+.agenda-week a {
+    display: grid;
+    justify-items: center;
+    gap: .25rem;
+    padding: .5rem 0;
+    border-radius: 8px;
+    color: #103533;
+    text-decoration: none;
+}
+
+.agenda-week span {
+    font-size: .8rem;
+}
+
+.agenda-week strong {
+    font-size: 1.2rem;
+}
+
+.agenda-week a:hover,
+.agenda-weekknoppen a:hover {
+    background: #edf8f4;
+}
+
+.agenda-week a[aria-current="date"] {
+    background: #d9f0e8;
+    color: #086256;
+}
+
+.agenda-dag {
+    margin-top: 1rem;
+    padding: 1.25rem;
+}
+
+.agenda-dag h2 {
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+}
+
+.agenda-tijdlijn {
+    display: grid;
+    gap: .75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.agenda-tijdlijn li {
+    display: grid;
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    align-items: start;
+    gap: .75rem;
+}
+
+.agenda-tijdlijn time {
+    padding-top: .75rem;
+    color: #086256;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.agenda-afspraak {
+    display: grid;
+    gap: .15rem;
+    padding: .75rem 1rem;
+    border-inline-start: 4px solid #086256;
+    border-radius: 8px;
+    background: #edf8f4;
+    overflow-wrap: anywhere;
+}
+
+.agenda-afspraak span,
+.agenda-leeg {
+    color: #4d6663;
+}
+
+.agenda-leeg {
+    margin: 0;
+    padding: 1rem;
+    border: 1px dashed #b8dbd0;
+    border-radius: 8px;
+}

@@ -13,4 +13,5 @@ Route::view('/dashboard', 'dashboard')->name('dashboard');
 Route::get('/patienten', [PatientController::class, 'index'])
     ->name('patienten.index');
 
-Route::get('/agenda', [AgendaController::class, 'index'])->name('agenda.index');
+Route::get('/agenda', [AgendaController::class, 'index'])
+    ->name('agenda.index');
