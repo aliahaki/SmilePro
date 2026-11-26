@@ -246,3 +246,25 @@ a:focus-visible {
     outline: 2px solid #086256;
     outline-offset: 3px;
 }
+
+.agenda-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 1.25rem;
+}
+
+.agenda-filter input,
+.agenda-filter button {
+    padding: .6rem .85rem;
+    border: 1px solid #b8dbd0;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.agenda-filter button {
+    background: #086256;
+    color: #fff;
+    cursor: pointer;
+}
