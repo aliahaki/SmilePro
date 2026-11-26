@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard | SmilePro</title>
+    <title>Patienten | SmilePro</title>
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 </head>
 
@@ -64,10 +64,10 @@
         </div>
     @endif
 
-    @if ($patienten->isEmpty())
-        <dialog id="patienten-melding" class="patienten-dialog" aria-labelledby="melding-titel">
-            <h2 id="melding-titel">Patiënten overzicht</h2>
-            <p>Er zijn geen patiënten gevonden.</p>
+    @if ($afspraken->isEmpty())
+        <dialog id="agenda-melding" class="patienten-dialog" aria-labelledby="agenda-melding-titel">
+            <h2 id="agenda-melding-titel">Agenda overzicht</h2>
+            <p>Er zijn geen afspraken ingepland voor deze datum.</p>
 
             <form method="dialog">
                 <button type="submit" autofocus>Sluiten</button>
@@ -75,16 +75,16 @@
         </dialog>
 
         <script>
-            const melding = document.getElementById('patienten-melding');
+            const agendaMelding = document.getElementById('agenda-melding');
 
-            melding.showModal();
+            agendaMelding.showModal();
 
             setTimeout(() => {
-                if (melding.open) {
-                    melding.close();
+                if (agendaMelding.open) {
+                    agendaMelding.close();
                 }
             }, 3000);
-        </script>   
+        </script>
     @endif
 </body>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard | SmilePro</title>
+    <title>Agenda | SmilePro</title>
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 </head>
 
@@ -17,8 +17,8 @@
 
             <nav class="sidebar-nav" aria-label="Hoofdnavigatie">
                 <a href="{{ route('dashboard') }}">Dashboard</a>
-                <a href="{{ url('/agenda') }}">Agenda</a>
-                <a href="{{ route('patienten.index') }}" aria-current="page">Patiënten</a>
+                <a href="{{ url('/agenda') }}" aria-current="page">Agenda</a>
+                <a href="{{ route('patienten.index') }}">Patiënten</a>
                 <a href="{{ url('/behandelingen') }}">Behandelingen</a>
             </nav>
         </aside>
