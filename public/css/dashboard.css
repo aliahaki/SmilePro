@@ -377,3 +377,77 @@ a:focus-visible {
     border: 1px dashed #b8dbd0;
     border-radius: 8px;
 }
+
+#agenda-maandtitel {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.agenda-maand-scroll {
+    overflow-x: auto;
+    border-top: 1px solid #dce7e4;
+}
+
+.agenda-maand {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 1px;
+    min-width: 46rem;
+    background: #dce7e4;
+}
+
+.agenda-weekdag {
+    padding: .65rem;
+    background: #edf8f4;
+    color: #103533;
+    font-weight: 700;
+    text-align: center;
+}
+
+.agenda-maand-dag,
+.agenda-maand-leeg {
+    min-height: 7rem;
+    padding: .5rem;
+    background: #fff;
+}
+
+.agenda-maand-leeg {
+    background: #f4f8f7;
+}
+
+.agenda-maand-dag:has([aria-current="date"]) {
+    background: #f0faf6;
+}
+
+.agenda-dagnummer {
+    display: inline-grid;
+    min-width: 2rem;
+    min-height: 2rem;
+    place-items: center;
+    border-radius: .5rem;
+    color: #103533;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.agenda-dagnummer:hover {
+    background: #d9f0e8;
+}
+
+.agenda-dagnummer[aria-current="date"] {
+    background: #086256;
+    color: #fff;
+}
+
+.agenda-maand-afspraak {
+    display: grid;
+    gap: .1rem;
+    margin-top: .35rem;
+    padding: .4rem .5rem;
+    border-inline-start: 3px solid #086256;
+    border-radius: .35rem;
+    background: #d9f0e8;
+    color: #103533;
+    font-size: .8rem;
+    overflow-wrap: anywhere;
+}
