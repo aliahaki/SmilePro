@@ -2,21 +2,20 @@
 
 namespace App\Providers;
 
+use App\Services\HomePaginaService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
     public function register(): void
     {
-        //
+        // Registreert de Service voor de homepagina.
+        $this->app->singleton(
+            HomePaginaService::class,
+            fn() => new HomePaginaService()
+        );
     }
 
-    /**
-     * Bootstrap any application services.
-     */
     public function boot(): void
     {
         //
