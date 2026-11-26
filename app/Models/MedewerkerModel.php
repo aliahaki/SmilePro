@@ -7,7 +7,12 @@ use Illuminate\Support\Facades\DB;
 
 class MedewerkerModel extends Model
 {
-    //stored procedures
+    protected $table = 'Medewerker';
 
-    
+    public $timestamps = false;
+
+    public static function medewerkerOverzicht()
+    {
+        return collect(DB::select('CALL sp_MedewerkerOverzicht()'));
+    }
 }

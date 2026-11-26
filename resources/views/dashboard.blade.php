@@ -18,7 +18,7 @@
                 <a href="{{ url('/agenda') }}">Agenda</a>
                 <a href="{{ route('patienten.index') }}">Patiënten</a>
                 <a href="{{ url('/behandelingen') }}">Behandelingen</a>
-                <a href="{{ url('/Medewerker') }}">Medewerker</a>
+                <a href="{{ route('Medewerker.index') }}" aria-current="page">Medewerker</a>
             </nav>
         </aside>
 
