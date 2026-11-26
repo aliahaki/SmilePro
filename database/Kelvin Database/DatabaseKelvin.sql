@@ -11,9 +11,6 @@ VALUES
 (2, 'Sophie Visser', 'Administratief medewerker', 'sophie@smilepro.nl', 'test123', 1),
 (2, 'Mark Smit', 'Tandarts', 'mark@smilepro.nl', 'test123', 1);
 
-
-
-
 --------------------------------------
 --Insert into praktijkmanagment
 
