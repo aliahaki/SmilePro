@@ -29,7 +29,7 @@
                 <h1>Medewerkers overzicht</h1>
             </header>
 
-            <div class="medewerkers-tabel">
+            <div class="patienten-tabel">
                 <table aria-label="Geregistreerde medewerkers">
                     <thead>
                         <tr>

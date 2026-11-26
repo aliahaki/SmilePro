@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -7,6 +8,10 @@ return new class extends Migration
 {
     public function up(): void
     {
+        DB::unprepared("
+            DROP PROCEDURE IF EXISTS sp_MedewerkerOverzicht
+        ");
+
         DB::unprepared("
             CREATE PROCEDURE sp_MedewerkerOverzicht()
             BEGIN
@@ -22,7 +27,7 @@ return new class extends Migration
                     m.Datumaangemaakt,
                     m.Datumgewijzigd
                 FROM Medewerker m
-                INNER JOIN Praktijkmanagment p
+                LEFT JOIN Praktijkmanagment p
                     ON m.PraktijkmanagmentId = p.Id
                 ORDER BY m.Naam ASC;
             END
